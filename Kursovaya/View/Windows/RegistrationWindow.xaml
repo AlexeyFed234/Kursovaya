@@ -1,0 +1,47 @@
+﻿<Window x:Class="Kursovaya.View.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya.View.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Background="#3b8c88" Height="250" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock  Grid.Column="1" Text="Форма регистрации" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   TextAlignment="Center" FontSize="16" Margin="41,5,41,5" Foreground="White"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="ФИО:" Foreground="White"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="FullNameTb" Margin="5" Opacity="0.6"/>
+
+
+        <TextBlock Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Center"  Text="Логин:" Foreground="White"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="LoginTb" Margin="5,5,5,5" Opacity="0.6"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Пароль:" Foreground="White"/>
+        <PasswordBox Grid.Row="3" Grid.Column="1" Name="PassowrdPb" Margin="5" Opacity="0.6"/>
+
+        <Button IsDefault = "false" Grid.Row="5" Grid.Column="1" Content="Регистрация" Background="#c06d0c" BorderBrush="Black" Foreground="White" Click="Button_Click"  
+                HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Height="26" Margin="0,10,0,0">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

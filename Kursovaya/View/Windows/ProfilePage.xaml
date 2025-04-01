@@ -1,0 +1,48 @@
+﻿<Window x:Class="Kursovaya.View.Windows.ProfilePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovaya.View.Windows"
+        mc:Ignorable="d"
+        Title="ProfilePage" Height="450" Width="800">
+    <Grid>
+        <Grid Background="#3b8c88">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Левая панель (Фото + кнопки) -->
+                <StackPanel Margin="20" Grid.Column="0">
+                    <Border BorderBrush="Orange" BorderThickness="2" Width="160" Height="200">
+                        <Image Name="ProfileImage" Stretch="Fill"/>
+                    </Border>
+                    <Button Content="Выбрать фото" Background="Orange" Foreground="White" 
+                    Margin="0,10,0,0" Click="ChoosePhoto"/>
+                </StackPanel>
+
+                <!-- Правая панель (Форма профиля) -->
+                <StackPanel Margin="20" Grid.Column="1">
+                    <TextBlock Text="Номер телефона:" Foreground="White"/>
+                    <TextBox Text="+7XXXXXXXXXX" IsReadOnly="True" Background="Gray"/>
+
+                    <TextBlock Text="Электронная почта:" Foreground="White" Margin="0,10,0,0"/>
+                    <TextBox Text="example@gmail.com" IsReadOnly="True" Background="Gray"/>
+
+                    <TextBlock Text="Старый пароль:" Foreground="White" Margin="0,10,0,0"/>
+                    <PasswordBox Name="OldPassword"/>
+
+                    <TextBlock Text="Новый пароль:" Foreground="White" Margin="0,10,0,0"/>
+                    <PasswordBox Name="NewPassword"/>
+
+                    <TextBlock Text="Повторите новый пароль:" Foreground="White" Margin="0,10,0,0"/>
+                    <PasswordBox Name="ConfirmPassword"/>
+
+                    <Button Content="Сохранить изменения" Background="Orange" Foreground="White" 
+                    Margin="0,10,0,0" Click="SaveChanges"/>
+                </StackPanel>
+            </Grid>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="Kursovaya.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Главное окно" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid Background="#3b8c88">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="499*"/>
+            <ColumnDefinition Width="201*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Левая панель (Меню) -->
+        <StackPanel Grid.Column="0" Background="#7a8586" Width="200">
+            <TextBlock Text="Меню" Foreground="White" FontSize="20" Margin="10" HorizontalAlignment="Center"/>
+            <Button Content="Профиль" Name="BtnProfile" Click="NavigateToProfile" Background="#c06d0c" Foreground="White" Margin="10"/>
+            <Button Content="Текущие заказы" Name="BtnOrders" Click="NavigateToOrders" Background="#c06d0c" Foreground="White" Margin="10"/>
+            <Button Content="Склады" Name="BtnWarehouses" Click="NavigateToWarehouses" Background="#c06d0c" Foreground="White" Margin="10"/>
+            <Button Content="Корабли" Name="BtnShips" Click="NavigateToShips" Background="#c06d0c" Foreground="White" Margin="10"/>
+            <Button Content="Выход" Click="ExitApp" Background="Red" Foreground="White" Margin="10"/>
+        </StackPanel>
+
+        <!-- Основной контент -->
+        <Frame Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>       
